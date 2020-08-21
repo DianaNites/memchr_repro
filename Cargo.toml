@@ -1,0 +1,12 @@
+[package]
+name = "memchr_repro"
+version = "0.1.0"
+authors = ["Diana"]
+edition = "2018"
+
+[dependencies]
+# Fails, LLVM ERROR: Do not know how to split this operator's operand!
+memchr = { version = "2.3.3", default-features = false }
+
+# Works
+# memchr = { version = "=2.1", default-features = false }
